@@ -9,8 +9,9 @@
 # 🔥 Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation [CVPR 2023]
 
 [Li Li](https://luisli.org), [Hubert P. H. Shum](http://hubertshum.com/) and [Toby P. Breckon](https://breckon.org/toby/), In Proc. International Conference on Computer Vision and Pattern Recognition (CVPR), IEEE, 2023
-
 [[project page](#)] [[pdf](#)] [[video](#)] [[poster](#)]
+
+Code will be released soon.
 
 ## News 
 
