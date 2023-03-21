@@ -1,5 +1,9 @@
+[![Durham](https://img.shields.io/badge/UK-Durham-blueviolet)](https://www.durham.ac.uk)
+[![arXiv](https://img.shields.io/badge/arXiv-2303.11203-b31b1b.svg)](https://arxiv.org/abs/2303.11203)
 ![code visitors](https://visitor-badge.glitch.me/badge?page_id=l1997i/lim3d)
 [![GitHub license](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://github.com/l1997i/lim3d/blob/main/LICENSE)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white&style=flat)
+![Stars](https://img.shields.io/github/stars/l1997i/lim3d?style=social)
 <div align="center">
     <img src="./img/durham_logo.png" width="15%" />  &emsp;&emsp;&emsp;&emsp;
     <img src="./img/cvpr23_logo.png" width="20%" /> <br>
