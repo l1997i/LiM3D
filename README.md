@@ -13,7 +13,9 @@
 # 🔥 Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation [CVPR 2023]
 
 [Li Li](https://luisli.org), [Hubert P. H. Shum](http://hubertshum.com/) and [Toby P. Breckon](https://breckon.org/toby/), In Proc. International Conference on Computer Vision and Pattern Recognition (CVPR), IEEE, 2023
-[[project page](#)] [[pdf](#)] [[video](#)] [[poster](#)]
+[[homepage](https://project.luisli.org/lim3d/)] [[pdf](https://arxiv.org/pdf/2303.11203.pdf)] [[video](https://project.luisli.org/lim3d/static/videos/cvpr2023_777_video.mp4)] [[poster](https://www.luisli.org/assets/pdf/li23cvpr_poster_big.pdf)]
+
+[![Video](./img/presentation_video.png)](https://project.luisli.org/lim3d/static/videos/cvpr2023_777_video.mp4)
 
 Code will be released soon.
 
@@ -109,7 +111,7 @@ Will be released soon.
 
 If you are making use of this work in any way, you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
 
-[Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation](#) ([Li Li](https://luisli.org), [Hubert P. H. Shum](http://hubertshum.com/) and [Toby P. Breckon](https://breckon.org/toby/)), In IEEE Conf. Comput. Vis. Pattern Recog. (CVPR), 2023. [[project](#)] [[pdf](#)] [[video](#)] [[poster](#)]
+[Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation](#) ([Li Li](https://luisli.org), [Hubert P. H. Shum](http://hubertshum.com/) and [Toby P. Breckon](https://breckon.org/toby/)), In IEEE Conf. Comput. Vis. Pattern Recog. (CVPR), 2023. [[homepage](https://project.luisli.org/lim3d/)] [[pdf](https://arxiv.org/pdf/2303.11203.pdf)] [[video](https://project.luisli.org/lim3d/static/videos/cvpr2023_777_video.mp4)] [[poster](https://www.luisli.org/assets/pdf/li23cvpr_poster_big.pdf)]
 
 ```bibtex
 @InProceedings{li23lim3d,
