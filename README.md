@@ -16,7 +16,8 @@
 [[homepage](https://project.luisli.org/lim3d/)] [[pdf](https://arxiv.org/pdf/2303.11203.pdf)] [[video](https://www.bilibili.com/video/BV1ih4y1b7gp/?share_source=copy_web&vd_source=0f5e46081bb4e59af9a0ccd37c106f35)] [[poster](https://www.luisli.org/assets/pdf/li23cvpr_poster_big.pdf)]
 
 
-https://github.com/l1997i/lim3d/assets/35445094/06de68c1-6560-4553-b4e0-d7ab3ae16c1d
+
+https://github.com/l1997i/lim3d/assets/35445094/d52f9d80-c4dc-4147-af0c-6101ca6f6b0f
 
 
 Code will be released soon.
