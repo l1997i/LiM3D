@@ -26,9 +26,9 @@ https://github.com/l1997i/lim3d/assets/35445094/d52f9d80-c4dc-4147-af0c-6101ca6f
 
 ## News 
 
-[2023/06/21] 🇨🇦 We will present our work in West Building Exhibit Halls ABC 108 @ Wed 21 Jun 10:30 a.m. PDT — noon PDT. See you in Vancouver, Canada.
-[2023/06/20] Code released.  
-[2023/02/27] LiM3D was accepted at CVPR 2023!
+[2023/06/21] 🇨🇦 We will **present our work** in West Building Exhibit Halls ABC 108 @ Wed 21 Jun 10:30 a.m. PDT — noon PDT. See you in Vancouver, Canada.  
+[2023/06/20] **Code released**.  
+[2023/02/27] LiM3D was **accepted** at CVPR 2023!
 
 ## Data Preparation
 
