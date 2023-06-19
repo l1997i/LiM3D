@@ -100,7 +100,11 @@ Our overall architecture involves three stages (Figure 2). You can reproduce our
 Please refer to our **supplementary 
 ** and **supplementary documentation** for more qualitative results.
 
-To validate the results, please refer to the script in `experiments` folder, and put the pretrained models in the `models` folder. Change `CKPT_PATH` and `SAVE_DIR` in the `predict.sh` file. Run following scripts:
+You can download our pretrained models [here](https://durhamuniversity-my.sharepoint.com/:f:/g/personal/mznv82_durham_ac_uk/Es4lmKcQ49lIh57u89gI5UsBWBBSeq-LdbZedfBS9m1x3g?e=3fr3YR) via `Onedrive`.
+
+To validate the results, please refer to the scripts in `experiments` folder, and put the pretrained models in the `models` folder. Specify `CKPT_PATH` and `SAVE_DIR` in `predict.sh` file. 
+
+For example, if you want to validate the results of 10% labeled training frames + LiM3D (without SDSC) + with `reflectivity` features on `ScribbleKITTI`, you can specify `CKPT_PATH` as `model/sck_crb10_feat69_61.01.ckpt`. Run following scripts:
 
 ```bash
 bash experiments/predict.sh
