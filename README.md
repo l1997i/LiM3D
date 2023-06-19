@@ -20,14 +20,14 @@
 https://github.com/l1997i/lim3d/assets/35445094/d52f9d80-c4dc-4147-af0c-6101ca6f6b0f
 
 
-Code will be released soon.
-
 > **Abstract**: Whilst the availability of 3D LiDAR point cloud data has significantly grown in recent years, annotation remains expensive and time-consuming, leading to a demand for semi-supervised semantic segmentation methods with application domains such as autonomous driving. Existing work very often employs relatively large segmentation backbone networks to improve segmentation accuracy, at the expense of computational costs. In addition, many use uniform sampling to reduce ground truth data requirements for learning needed, often resulting in sub-optimal performance. To address these issues, we propose a new pipeline that employs a smaller architecture, requiring fewer ground-truth annotations to achieve superior segmentation accuracy compared to contemporary approaches. This is facilitated via a novel Sparse Depthwise Separable Convolution module that significantly reduces the network parameter count while retaining overall task performance. To effectively sub-sample our training data, we propose a new Spatio-Temporal Redundant Frame Downsampling (ST-RFD) method that leverages knowledge of sensor motion within the environment to extract a more diverse subset of training data frame samples. To leverage the use of limited annotated data samples, we further propose a soft pseudo-label method informed by LiDAR reflectivity. Our method outperforms contemporary semi-supervised work in terms of mIoU, using less labeled data, on the SemanticKITTI (**59.5**@5%) and ScribbleKITTI (**58.1**@5%) benchmark datasets, based on a **2.3×** reduction in model parameters and **641×** fewer multiply-add operations whilst also demonstrating significant performance improvement on limited training data (*i.e.*, *Less is More*).
 
 ![](./img/pipeline.png)
 
 ## News 
 
+[2023/06/21] 🇨🇦 We will present our work in West Building Exhibit Halls ABC 108 @ Wed 21 Jun 10:30 a.m. PDT — noon PDT. See you in Vancouver, Canada.
+[2023/06/20] Code released.  
 [2023/02/27] LiM3D was accepted at CVPR 2023!
 
 ## Data Preparation
@@ -100,15 +100,11 @@ Our overall architecture involves three stages (Figure 2). You can reproduce our
 Please refer to our **supplementary 
 ** and **supplementary documentation** for more qualitative results.
 
-## Model Zoo
-Will be released soon.
+To validate the results, please refer to the script in `experiments` folder, and put the pretrained models in the `models` folder. Change `CKPT_PATH` and `SAVE_DIR` in the `predict.sh` file. Run following scripts:
 
-<!-- | Method     | Dataset       | 1%       | 2%       | 5%       | 10%      | 20%      | 40%      |
-|:----------:|:-------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| LiM3D      | SemanticKITTI | Download | Download | Download | Download | Download | Download |
-| LiM3D      | ScribbleKITTI | Download | Download | Download | Download | Download | Download |
-| LiM3D+SDSC | SemanticKITTI | Download | Download | Download | Download | Download | Download |
-| LiM3D+SDSC | ScribbleKITTI | Download | Download | Download | Download | Download | Download | -->
+```bash
+bash experiments/predict.sh
+```
 
 
 ## Citation

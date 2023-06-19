@@ -1,0 +1,62 @@
+model:
+  # in_feat: 12 # no refpls
+  # in_feat: 69 # training with ref
+  in_feat: 39 # refpls
+  hid_feat: 32
+
+dataset:
+  root_dir: 'data/sequences'
+  # prefix: reflec_cylindrical_mt        # no refpls
+  prefix: reflec_refpls_cylindrical_mt # refpls
+  bin_size: [[24,9],[48,18],[96,36]]
+  label_directory: 'labels'
+  spatial_shape: [480,360,32]
+  max_bound: [50,3.1415926,2]
+  min_bound: [0,-3.1415926,-4]
+  aug:
+    student: ['rotate', 'flip', 'scale', 'noise']
+    teacher: ['rotate', 'flip']
+  sampling:
+    strategy: full
+    beta: 0
+
+train_dataloader:
+  batch_size: 1
+  shuffle: True
+  num_workers: 16
+
+val_dataloader:
+  batch_size: 1
+  shuffle: False
+  num_workers: 16
+
+contrastive:
+  enabled: False
+  mu_c: 0.3        # weight for contrastive loss
+  negative_high_entropy: True
+  low_rank: 3
+  high_rank: 20
+  current_class_threshold: 0.3
+  current_class_negative_threshold: 1
+  unsupervised_entropy_ignore: 80
+  low_entropy_threshold: 40 #20
+  num_negatives: 50
+  num_queries: 16 #256
+  temperature: 0.5
+
+trainer:
+  max_epochs: 75
+  gpus: 1
+  check_val_every_n_epoch: 1
+  default_root_dir: 'output'
+  accelerator: 'ddp_sharded'
+  sync_batchnorm: True
+  accumulate_grad_batches: 2
+  num_sanity_val_steps: 1
+
+optimizer:
+  lr: 0.001
+
+logger:
+  project: 'lim3d'
+  name: 'prediction'

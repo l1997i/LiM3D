@@ -1,0 +1,26 @@
+{
+    "workbench.colorCustomizations": {
+        "editorInlayHint.background": "#7212aee9",
+        "editorInlayHint.foreground": "#ffffffc2",
+        "editorInlayHint.parameterBackground": "#00962fd0",
+        "editorInlayHint.parameterForeground": "#ffffffc2",
+        "editorInlayHint.typeBackground": "#004b96d0",
+        "editorInlayHint.typeForeground": "#cbcbcbe8",
+        "editorIndentGuide.activeBackground": "#ffee00d8",
+        "editorIndentGuide.background": "#9393937b",
+        "editorBracketPairGuide.background1": "#FFB86C",
+        "editorBracketPairGuide.background2": "#FF75B5",
+        "editorBracketPairGuide.background3": "#45A9F9",
+        "editorBracketPairGuide.background4": "#B084EB",
+        "editorBracketPairGuide.background5": "#ffe8c9",
+        "editorBracketPairGuide.background6": "#19f9d8",
+        "editorBracketPairGuide.activeBackground1": "#FFB86C",
+        "editorBracketPairGuide.activeBackground2": "#FF75B5",
+        "editorBracketPairGuide.activeBackground3": "#45A9F9",
+        "editorBracketPairGuide.activeBackground4": "#B084EB",
+        "editorBracketPairGuide.activeBackground5": "#ffe8c9",
+        "editorBracketPairGuide.activeBackground6": "#19f9d8",
+        "editor.lineHighlightBackground": "#0066ff44",
+        "editor.lineHighlightBorder": "#00000000"
+    }
+}
