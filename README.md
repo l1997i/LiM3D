@@ -1,6 +1,6 @@
-[![Durham](https://img.shields.io/badge/UK-Durham-blueviolet)](https://www.durham.ac.uk)
+[![Durham](https://img.shields.io/badge/UK-Durham-blueviolet)](https://dro.dur.ac.uk/38185/)
+[![CVF](https://img.shields.io/badge/IEEE-CVF-blue)](https://openaccess.thecvf.com/content/CVPR2023/html/Li_Less_Is_More_Reducing_Task_and_Model_Complexity_for_3D_CVPR_2023_paper.html)
 [![arXiv](https://img.shields.io/badge/arXiv-2303.11203-b31b1b.svg)](https://arxiv.org/abs/2303.11203)
-![code visitors](https://visitor-badge.glitch.me/badge?page_id=l1997i/lim3d)
 [![GitHub license](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://github.com/l1997i/lim3d/blob/main/LICENSE)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white&style=flat)
 ![Stars](https://img.shields.io/github/stars/l1997i/lim3d?style=social)
