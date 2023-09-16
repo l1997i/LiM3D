@@ -61,7 +61,7 @@ Please follow the instructions from [SemanticKITTI](http://www.semantic-kitti.or
 ### ScribbleKITTI
 Please download `ScribbleKITTI` [scribble annotations](https://data.vision.ee.ethz.ch/ouenal/scribblekitti.zip) and unzip in the same directory. Each sequence in the train-set (00-07, 09-10) should contain the `velodyne`, `labels` and `scribbles` directories.
 
-Move the `sequences` folder or make a symbolic link to a new directoy inside the project dir called `data/`. Alternatively, edit the `dataset: root_dir` field of each config file to point to the sequences folder.
+Move the `sequences` folder or make a symbolic link to a new directory inside the project dir called `data/`. Alternatively, edit the `dataset: root_dir` field of each config file to point to the sequences folder.
 
 ## Environment Setup
 
@@ -81,7 +81,7 @@ source ~/venv/scribblekitti/bin/activate
 pip install -r requirements.txt
 ```
 
-Futhermore install the following dependencies:
+Furthermore install the following dependencies:
 - [pytorch](https://pytorch.org/get-started/previous-versions/#v1101) (tested with version `1.10.1+cu111`)
 - [pytorch-lightning](https://www.pytorchlightning.ai/) (tested with version `1.6.5`)
 - [torch-scatter](https://github.com/rusty1s/pytorch_scatter) (tested with version `2.0.9`)
@@ -91,9 +91,9 @@ Futhermore install the following dependencies:
 
 Our overall architecture involves three stages (Figure 2). You can reproduce our results through the scripts provided in the `experiments` folder: 
 
-1. **Training**: we utilize reflectivity-prior descriptors and adapt the Mean Teacher framework to generate high-quality pseudo-labels. Runing with bash script: `bash experiments/train.sh`; 
-2. **Pseudo-labeling**: we fix the trained teacher model prediction in a class-range-balanced manner, expanding dataset with Reflectivity-based Test Time Augmentation (Reflec-TTA) during test time. Runing with bash script: `bash experiments/crb.sh`, then save the pseudo-labels `bash experiments/save.sh`; 
-3. **Distillation with unreliable predictions**: we train on the generated pseudo-labels, and utilize unreliable pseudo-labels in a category-wise memory bank for improved discrimination. Runing with bash script: `bash experiments/distilation.sh`.
+1. **Training**: we utilize reflectivity-prior descriptors and adapt the Mean Teacher framework to generate high-quality pseudo-labels. Running with bash script: `bash experiments/train.sh`; 
+2. **Pseudo-labeling**: we fix the trained teacher model prediction in a class-range-balanced manner, expanding dataset with Reflectivity-based Test Time Augmentation (Reflec-TTA) during test time. Running with bash script: `bash experiments/crb.sh`, then save the pseudo-labels `bash experiments/save.sh`; 
+3. **Distillation with unreliable predictions**: we train on the generated pseudo-labels, and utilize unreliable pseudo-labels in a category-wise memory bank for improved discrimination. Running with bash script: `bash experiments/distilation.sh`.
 
 ## Results
 
