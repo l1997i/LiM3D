@@ -1,8 +1,11 @@
 from spconv.pytorch.conv import (SparseConv3d, SparseInverseConv3d)
 from torch import nn
 
-from network.modules.sparse_convolution import *  # Normal SparseConv3d
-# from network.modules.sds_convolution import *  # SDSC, Sparse Depthwise Separable Convolution
+# Un-comment the following line for Normal SparseConv3d
+# from network.modules.sparse_convolution import *  
+
+# Un-comment the following line for SDSC, Sparse Depthwise Separable Convolution
+from network.modules.sds_convolution import *  
 
 class ResContextBlock(nn.Module):
     def __init__(self, in_filters, out_filters, kernel_size=(3, 3, 3), stride=1, indice_key=None):

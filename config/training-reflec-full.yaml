@@ -1,0 +1,70 @@
+model:
+  in_feat: 69  # with ref
+  # in_feat: 66  # without ref
+  hid_feat: 32
+
+dataset:
+  root_dir: 'data/sequences'
+  prefix: reflec_pls_cylindrical # with ref
+  # prefix: pls_cylindrical_mt     # without ref
+  spatial_shape: [480,360,32]
+  max_bound: [50,3.1415926,2]
+  min_bound: [0,-3.1415926,-4]
+  aug:
+    student: ['rotate', 'flip', 'scale', 'noise']
+    teacher: ['rotate', 'flip']
+  bin_size: [[24,9],[48,18],[96,36]]
+  # label_directory: 'labels'        # semantickitti
+  label_directory: 'scribbles'     #  scribblekitti
+  sampling:
+    strategy: full
+    beta: 0
+    # strategy: mrfd
+    # beta: -10   #  1%
+    # beta: -5.72 # 10%
+    # beta: -4    # 20%
+    # beta: -2.28   # 40%
+    # beta: -1.72 # 50%
+
+train_dataloader:
+  batch_size: 1 #1
+  shuffle: True
+  num_workers: 24 #4
+
+val_dataloader:
+  batch_size: 1 #1
+  shuffle: False
+  num_workers: 24 #4
+
+trainer:
+  # precision: 16
+  max_epochs: 200
+  gpus: -1
+  check_val_every_n_epoch: 1
+  default_root_dir: 'output'
+  accelerator: 'ddp_sharded'
+  sync_batchnorm: True
+  auto_lr_find: True
+  accumulate_grad_batches: 2
+  num_sanity_val_steps: 1
+
+contrastive:
+  enabled: False
+  mu_c: 0.3        # weight for contrastive loss
+  negative_high_entropy: True
+  low_rank: 3
+  high_rank: 20
+  current_class_threshold: 0.3
+  current_class_negative_threshold: 1
+  unsupervised_entropy_ignore: 80
+  low_entropy_threshold: 40 #20
+  num_negatives: 50
+  num_queries: 16 #256
+  temperature: 0.5
+
+optimizer:
+  lr: 0.001
+
+logger:
+  project: 'scribblekitti'
+  name: 'training'

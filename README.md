@@ -94,12 +94,12 @@ Our overall architecture involves three stages (Figure 2). You can reproduce our
 
 1. **Training**: we utilize reflectivity-prior descriptors and adapt the Mean Teacher framework to generate high-quality pseudo-labels. Running with bash script: `bash experiments/train.sh`; 
 2. **Pseudo-labeling**: we fix the trained teacher model prediction in a class-range-balanced manner, expanding dataset with Reflectivity-based Test Time Augmentation (Reflec-TTA) during test time. Running with bash script: `bash experiments/crb.sh`, then save the pseudo-labels `bash experiments/save.sh`; 
-3. **Distillation with unreliable predictions**: we train on the generated pseudo-labels, and utilize unreliable pseudo-labels in a category-wise memory bank for improved discrimination. Running with bash script: `bash experiments/distilation.sh`.
+3. **Distillation with unreliable predictions**: we train on the generated pseudo-labels, and utilize unreliable pseudo-labels in a category-wise memory bank for improved discrimination. Running with bash script: `bash experiments/dist-reflec.sh`.
+
 
 ## Results
 
-Please refer to our **supplementary 
-** and **supplementary documentation** for more qualitative results.
+Please refer to our **supplementary video** and **supplementary documentation** for more qualitative results.
 
 You can download our pretrained models [here](https://durhamuniversity-my.sharepoint.com/:f:/g/personal/mznv82_durham_ac_uk/Es4lmKcQ49lIh57u89gI5UsBWBBSeq-LdbZedfBS9m1x3g?e=3fr3YR) via `Onedrive`.
 
@@ -111,6 +111,19 @@ For example, if you want to validate the results of 10% labeled training frames 
 bash experiments/predict.sh
 ```
 
+## NOTE: Sparse Depthwise Separable Convolution (SDSC)
+
+We provide 2 variants on LiM3D.
+1. **Normal SparseConv3d**: Un-comment Line 5 (`from network.modules.sparse_convolution import *`)  
+2. **SDSC**: Un-comment Line 8 (`from network.modules.sds_convolution import *`)  
+
+Our SDSC module is much more efficient with IPU (Intelligence Processing Unit) + `PopTorch` than normal GPU. 
+
+The SDSC module uses sparse group convolution (official SpConv), which is limited by memory bandwidth. Modern hardware depends on vector instructions for efficient dot product computations. Inefficiencies occur when these instructions aren’t fully utilized, causing potential FLOP wastage. Furthermore, if data isn’t immediately available to the compute engine, extra cycles are required for data transfer. This limitation’s impact is primarily influenced by memory bandwidth, which is likely the main constraint for the efficiency of our sparse depthwise and small-group convolutions.
+
+Based on the above issues, we recommend using IPU (Intelligence Processing Unit) for SDSC training. IPUs are specifically designed to handle sparse data efficiently, with architecture that maximizes the utilization of vector instructions and reduces FLOP wastage. Their high in-processor memory bandwidth and low-latency memory access ensure that data is readily available to the compute engine, minimizing additional cycles for data transfer. This makes IPUs highly suitable for sparse depthwise and small-group convolutions, enhancing overall training efficiency.
+
+As the future research direction, we are attempting to optimize the SDSC module with gpu-optimized architecture (refer to https://github.com/MegEngine/RepLKNet, https://github.com/dvlab-research/spconv-plus, etc), aiming to achieve breakthroughs and balance in accuracy, FLOPs, parameter size, and actual training time on normal GPU.
 
 ## Citation
 

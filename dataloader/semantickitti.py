@@ -167,7 +167,7 @@ class Cylindrical(Baseline, prefix='cylindrical'):
 
         rpz = self.cart2cyl(xyz)
         clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
         center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
         centered_rpz = rpz - center
@@ -202,7 +202,7 @@ class ReflecCylindricalMT(Cylindrical, prefix='reflec_cylindrical_mt'):
 
         rpz = self.cart2cyl(xyz)
         clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
         center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
         centered_rpz = rpz - center
@@ -250,7 +250,7 @@ class ReflecCylindricalMT(Cylindrical, prefix='reflec_cylindrical_mt'):
 
             rpz = self.cart2cyl(xyz)
             clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-            rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+            rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
             center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
             centered_rpz = rpz - center
@@ -280,7 +280,7 @@ class PLSCylindricalMT(CylindricalMT, prefix='pls_cylindrical_mt'):
 
         rpz = self.cart2cyl(xyz)
         clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
         center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
         centered_rpz = rpz - center
@@ -316,7 +316,7 @@ class ReflecPLSCylindricalMT(PLSCylindricalMT, prefix='reflec_pls_cylindrical_mt
 
         rpz = self.cart2cyl(xyz)
         clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
         center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
         centered_rpz = rpz - center
@@ -348,7 +348,7 @@ class ReflecPLSCylindrical(PLSCylindricalMT, prefix='reflec_pls_cylindrical'):
 
         rpz = self.cart2cyl(xyz)
         clipped_rpz = np.clip(rpz, self.min_bound, self.max_bound)
-        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(np.int)
+        rpz_discrete = (np.floor((clipped_rpz - self.min_bound)/self.drpz)).astype(int)
 
         center = (rpz_discrete.astype(np.float32) + 0.5) * self.drpz + self.min_bound
         centered_rpz = rpz - center
