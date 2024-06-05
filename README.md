@@ -113,9 +113,9 @@ bash experiments/predict.sh
 
 ## NOTE: Sparse Depthwise Separable Convolution (SDSC)
 
-We provide 2 variants on LiM3D.
+We provide 2 variants on LiM3D. In `network/modules/cylinder3d.py`,
 1. **Normal SparseConv3d**: Un-comment Line 5 (`from network.modules.sparse_convolution import *`)  
-2. **SDSC**: Un-comment Line 8 (`from network.modules.sds_convolution import *`)  
+2. **SDSC**: Un-comment Line 8 in (`from network.modules.sds_convolution import *`)  
 
 Our SDSC module is much more efficient with IPU (Intelligence Processing Unit) + `PopTorch` than normal GPU. 
 
