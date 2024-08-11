@@ -44,7 +44,7 @@ preferred-citation:
     given-names: "Toby P."
     orcid: "https://orcid.org/0000-0003-1666-7590"
   doi: "10.1109/CVPR52729.2023.00903"
-  booktitle: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  collection-title: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
   start: 9361
   end: 9371
   title: "Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation"
