@@ -30,8 +30,9 @@ identifiers:
     value: 10.1109/CVPR52729.2023.00903
 repository-code: 'https://github.com/l1997i/lim3d/'
 url: 'https://project.luisli.org/lim3d/'
+license: Apache-2.0
 preferred-citation:
-  type: proceedings
+  type: conference-paper
   authors:
   - family-names: "Li"
     given-names: "Li"
@@ -43,7 +44,7 @@ preferred-citation:
     given-names: "Toby P."
     orcid: "https://orcid.org/0000-0003-1666-7590"
   doi: "10.1109/CVPR52729.2023.00903"
-  journal: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  booktitle: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
   start: 9361
   end: 9371
   title: "Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation"
