@@ -1,0 +1,50 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Less is More: Reducing Task and Model Complexity for 3D
+  Point Cloud Semantic Segmentation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Li
+    family-names: Li
+    email: li.li4@durham.ac.uk
+    affiliation: Durham University
+    orcid: 'https://orcid.org/0000-0002-9392-7862'
+  - given-names: Toby P.
+    family-names: Breckon
+    email: toby.breckon@durham.ac.uk
+    affiliation: Durham University
+    orcid: 'https://orcid.org/0000-0003-1666-7590'
+  - given-names: Hubert P. H.
+    family-names: Shum
+    email: hubert.shum@durham.ac.uk
+    affiliation: Durham University
+    orcid: 'https://orcid.org/0000-0001-5651-6039'
+identifiers:
+  - type: doi
+    value: 10.1109/CVPR52729.2023.00903
+repository-code: 'https://github.com/l1997i/lim3d/'
+url: 'https://project.luisli.org/lim3d/'
+preferred-citation:
+  type: proceedings
+  authors:
+  - family-names: "Li"
+    given-names: "Li"
+    orcid: "https://orcid.org/0000-0002-9392-7862"
+  - family-names: "Shum"
+    given-names: "Hubert P. H."
+    orcid: "https://orcid.org/0000-0001-5651-6039"
+  - family-names: "Breckon"
+    given-names: "Toby P."
+    orcid: "https://orcid.org/0000-0003-1666-7590"
+  doi: "10.1109/CVPR52729.2023.00903"
+  journal: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  start: 9361
+  end: 9371
+  title: "Less is More: Reducing Task and Model Complexity for 3D Point Cloud Semantic Segmentation"
+  year: 2023
